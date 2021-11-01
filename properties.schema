@@ -1,0 +1,160 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "http://jsonschema.net",
+	"$ref": "http://localhost/plugins/content/component/model.schema",
+	"globals": {
+		"ariaRegion": {
+			"type": "string",
+			"required": true,
+			"default": "View the different steps.",
+			"inputType": "Text",
+			"validators": [],
+			"translatable": true
+		}
+	},
+	"properties": {
+		"_supportedLayout": {
+			"type": "string",
+			"required": true,
+			"enum": ["full-width", "half-width", "both"],
+			"default": "full-width",
+			"editorOnly": true
+		},
+		"instruction": {
+			"type": "string",
+			"required": false,
+			"default": "",
+			"inputType": "Text",
+			"validators": [],
+			"help": "This is the instruction text",
+			"translatable": true
+		},
+		"mobileInstruction": {
+			"type": "string",
+			"required": false,
+			"default": "",
+			"inputType": "Text",
+			"validators": [],
+			"help": "This is the mobile instruction text",
+			"translatable": true
+		},
+		"_hasDescriptionBelowNavigation": {
+			"type": "boolean",
+			"required": true,
+			"default": false,
+			"title": "Move description below navigation",
+			"inputType": "Checkbox",
+			"validators": [],
+			"help": "If enabled, the description drops below the navigation"
+		},
+		"_setCompletionOn": {
+			"type": "string",
+			"required": true,
+			"enum": ["inview", "allItems"],
+			"default": "allItems",
+			"title": "Set completion on",
+			"inputType": {
+				"type": "Select",
+				"options": ["inview", "allItems"]
+			},
+			"validators": ["required"],
+			"help": "Whether completion is based on the learner having viewed all the items - or just having viewed the component"
+		},
+		"_graphic": {
+			"type": "object",
+			"required": true,
+			"title": "Graphic",
+			"properties": {
+				"large": {
+					"type": "string",
+					"required": true,
+					"default": "",
+					"inputType": "Asset:image",
+					"validators": [],
+					"help": "Large image for this item - used on desktop"
+				},
+				"small": {
+					"type": "string",
+					"required": true,
+					"default": "",
+					"inputType": "Asset:image",
+					"validators": [],
+					"help": "Small image for this item - used on mobiles"
+				},
+				"alt": {
+					"type": "string",
+					"required": false,
+					"default": "",
+					"inputType": "Text",
+					"validators": [],
+					"help": "A description of the image; required when it has meaning that must be conveyed to the learner. Avoid duplication if the item text already provides context and leave blank.",
+					"translatable": true
+				}
+			}
+		},
+		"_items": {
+			"type": "array",
+			"required": true,
+			"title": "Steps Graphic items",
+			"items": {
+				"type": "object",
+				"required": true,
+				"properties": {
+					"title": {
+						"type": "string",
+						"required": true,
+						"default": "",
+						"title": "Steps Graphic item title",
+						"inputType": "Text",
+						"validators": [],
+						"help": "",
+						"translatable": true
+					},
+					"body": {
+						"type": "string",
+						"required": false,
+						"default": "",
+						"title": "Steps Graphic item body text",
+						"inputType": "TextArea",
+						"validators": [],
+						"help": "",
+						"translatable": true
+					},
+					"_graphic": {
+						"type": "object",
+						"required": true,
+						"title": "Graphic",
+						"properties": {
+							"large": {
+								"type": "string",
+								"required": true,
+								"default": "",
+								"inputType": "Asset:image",
+								"validators": [],
+								"help": "Large image for this item - used on desktop"
+							},
+							"small": {
+								"type": "string",
+								"required": true,
+								"default": "",
+								"inputType": "Asset:image",
+								"validators": [],
+								"help": "Small image for this item - used on mobiles"
+							},
+							"alt": {
+								"type": "string",
+								"required": false,
+								"default": "",
+								"inputType": "Text",
+								"validators": [],
+								"help": "A description of the image; required when it has meaning that must be conveyed to the learner. Avoid duplication if the item text already provides context and leave blank.",
+								"translatable": true
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "name": "adapt-stepsGraphic",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nachocinalli/adapt-stepsGraphic.git"
+  },
+  "framework": ">=5.14.0",
+  "version": "1.0.0",
+  "homepage": "https://github.com/nachocinalli/adapt-stepsGraphic",
+  "issues": "https://github.com/nachocinalli/adapt-stepsGraphic/issues",
+  "component": "stepsGraphic",
+  "description": "A steps graphic component",
+  "main": "/js/adapt-stepsGraphic.js",
+  "displayName": "Steps Graphic",
+  "keywords": ["adapt-plugin", "adapt-component"],
+  "license": "GPLv3"
+}
