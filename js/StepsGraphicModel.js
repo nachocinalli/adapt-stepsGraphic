@@ -1,4 +1,4 @@
-import ItemsComponentModel from 'core/js/models/ItemsComponentModel';
+import ItemsComponentModel from 'core/js/models/itemsComponentModel';
 
 export default class StepsGraphicModel extends ItemsComponentModel {
 
