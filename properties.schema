@@ -48,6 +48,16 @@
 			"validators": [],
 			"help": "If enabled, the description drops below the navigation"
 		},
+		"_hasEqualHeight": {
+			"type": "boolean",
+			"required": true,
+			"default": false,
+			"title": "Resize item graphic container",
+			"inputType": "Checkbox",
+			"validators": [],
+			"help": "If enabled, the item graphic container will have the same height as the main image."
+		},
+		
 		"_setCompletionOn": {
 			"type": "string",
 			"required": true,
@@ -152,6 +162,60 @@
 								"translatable": true
 							}
 						}
+					},
+					"_hasPin": {
+						"type": "boolean",
+						"required": true,
+						"default": false,
+						"title": "Has pin",
+						"inputType": "Checkbox",
+						"validators": [],
+						"help": "If enabled, add pin to item"
+					},
+					"_pinTop": {
+						"type": "number",
+						"required": true,
+						"default": 0,
+						"title": "Top",
+						"inputType": "Number",
+						"validators": ["required", "number"],
+						"help": "Pin top position"
+					},
+					"_pinLeft": {
+						"type": "number",
+						"required": true,
+						"default": 0,
+						"title": "Left",
+						"inputType": "Number",
+						"validators": ["required", "number"],
+						"help": "Pin left position"
+					},
+					"_pinClass": {
+						"type": "string",
+						"required": false,
+						"default": "",
+						"title": "Classes",
+						"inputType": "Text",
+						"validators": [],
+						"help": "Classes that are applied to the pin"
+					},
+					"_isNumeric": {
+						"type": "boolean",
+						"required": true,
+						"default": false,
+						"title": "Is numeric",
+						"inputType": "Checkbox",
+						"validators": [],
+						"help": "If enabled, add number to pin"
+					},
+					"_classes": {
+						"type": "string",
+						"required": false,
+						"default": "",
+						"title": "Classes",
+						"inputType": "Text",
+						"validators": [],
+						"help": "Classes that are applied to the item"
 					}
 				}
 			}

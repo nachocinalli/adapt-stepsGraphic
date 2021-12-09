@@ -17,6 +17,7 @@
   },
   "_setCompletionOn": "allItems",
   "_hasDescriptionBelowNavigation": false,
+  "_hasEqualHeight": false,
   "_items": [
     {
       "title": "Item 1",
@@ -26,6 +27,11 @@
         "small": "course/en/images/gmcq.png",
         "alt": "Item 1"
       },
+      "_hasPin": false,
+      "_pinTop": 0,
+      "_pinLeft": 0,
+      "_pinClass": "",
+      "_isNumeric": false,
       "_classes": ""
     },
     {
@@ -36,6 +42,11 @@
         "small": "course/en/images/gmcq.png",
         "alt": "Item 2"
       },
+      "_hasPin": false,
+      "_pinTop": 0,
+      "_pinLeft": 0,
+      "_pinClass": "",
+      "_isNumeric": false,
       "_classes": ""
     },
     {
@@ -46,6 +57,11 @@
         "small": "course/en/images/gmcq.png",
         "alt": "Item 3"
       },
+      "_hasPin": false,
+      "_pinTop": 0,
+      "_pinLeft": 0,
+      "_pinClass": "",
+      "_isNumeric": false,
       "_classes": ""
     },
     {
@@ -56,6 +72,11 @@
         "small": "course/en/images/gmcq.png",
         "alt": "Item 4"
       },
+      "_hasPin": false,
+      "_pinTop": 0,
+      "_pinLeft": 0,
+      "_pinClass": "",
+      "_isNumeric": false,
       "_classes": ""
     },
     {
@@ -66,6 +87,11 @@
         "small": "course/en/images/gmcq.png",
         "alt": "Item 5"
       },
+      "_hasPin": false,
+      "_pinTop": 0,
+      "_pinLeft": 0,
+      "_pinClass": "",
+      "_isNumeric": false,
       "_classes": ""
     }
   ]

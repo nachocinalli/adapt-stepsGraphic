@@ -9,10 +9,17 @@ class StepsGraphicView extends ComponentView {
   }
 
   postRender () {
-    this.setReadyStatus();
+    this.$('.component__widget').imageready(() => {
+      this.setReadyStatus();
+      if (this.model.get('_hasEqualHeight')) {
+        const mainGraphicHeight = this.$('.stepsgraphic__graphic-intro').find('.stepsgraphic__image-container').height();
+        this.$('.stepsgraphic__item-graphic-container').height(mainGraphicHeight);
+      }
+    });
     if (this.model.get('_setCompletionOn') === 'inview') {
       this.setupInviewCompletion('.component__widget');
     }
+
     const items = this.model.getChildren();
     if (!items || !items.length) return;
     const activeItem = this.model.getActiveItem();

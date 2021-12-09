@@ -58,7 +58,7 @@ export default function StepsGraphic (props) {
           'stepsgraphic__item-graphic-container'
 
         ])}>
-          {_items.map(({ title, body, _graphic, _classes, _index, _isVisited, _isActive }) =>
+          {_items.map(({ title, body, _graphic, _classes, _index, _isVisited, _hasPin, _pinTop, _pinLeft, _pinClass, _isNumeric, _isActive }) =>
             <div className={classes([
               'stepsgraphic__item',
               _isVisited && 'is-visited',
@@ -71,6 +71,13 @@ export default function StepsGraphic (props) {
                 classNamePrefixes={['component__item', 'stepsgraphic__item']}
                 attributionClassNamePrefixes={['component', 'stepsgraphic']}
               />
+              {_hasPin &&
+                <div
+                  className={classes(['stepsgraphic__item-pin', 'icon', _pinClass, (_isNumeric ? 'is-numeric' : null)])}
+                  style={ { top: `${_pinTop}%`, left: `${_pinLeft}%` }} >
+                  {_isNumeric && <div>{html(compile(`${_index + 1}`))}</div>}
+
+                </div>}
               {!_hasDescriptionBelowNavigation &&
                 <div className="stepsgraphic__item-description">
                   <div className="stepsgraphic__item-title">
@@ -91,6 +98,7 @@ export default function StepsGraphic (props) {
 
             <button onClick={onStepClick} key={_index}
               className={classes([
+                'btn-text',
                 'js-stepgraphic-item',
                 _isVisited && 'is-visited',
                 _isActive && 'is-active'
