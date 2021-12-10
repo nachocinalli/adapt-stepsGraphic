@@ -5,7 +5,6 @@ class StepsGraphicView extends ComponentView {
   preRender() {
     this.onStepClick = this.onStepClick.bind(this);
     this.onControlClick = this.onControlClick.bind(this);
-    this.listenTo(this.model.getChildren(), 'change:_isActive', this.onItemsActiveChange);
   }
 
   postRender () {
